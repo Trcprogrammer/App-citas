@@ -1,0 +1,25 @@
+<div class="card rounded-5"  *ngIf="listadoDatos.length === 0 " >
+    <div class="card-body " >
+        <h1 class="card-title  text-center ">No hay citas</h1>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="card mt-2   p-3  rounded-3 "  *ngFor="let datos of listadoDatos; let  i=index  "  >
+    <div class="card-body">
+      
+        <p class="card-text" >Nombre: {{datos.nombre}}</p>
+        <p class="card-text" >Fecha: {{datos.fecha}}</p>
+        <p class="card-text" >Hora: {{datos.hora}}</p>
+        <p class="card-text" >Sintomas: {{datos.sintoma}}</p>
+    
+      
+         <button class="btn btn-danger w-75" (click)="borrarDatos(i)"     >Borrar Cita</button>
+    </div>
+</div>
